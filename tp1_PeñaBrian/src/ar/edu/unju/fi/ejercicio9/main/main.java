@@ -4,9 +4,9 @@ import java.util.Scanner;
 
 import ar.edu.unju.fi.ejercicio9.model.Producto;
 
-public class Main {
+public class main {
 
-	public static void main(String[] args) {
+	public static void Main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
 		
 		int contador = 1;

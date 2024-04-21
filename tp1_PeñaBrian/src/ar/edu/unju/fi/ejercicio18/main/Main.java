@@ -67,7 +67,7 @@ public class Main {
         } while (opcion != 9);
         scanner.close();
     }
-  
+   
     private static ArrayList<Pais> cargarPaises() {
         ArrayList<Pais> paises = new ArrayList<>();
         paises.add(new Pais("001", "Argentina"));
@@ -87,20 +87,20 @@ public class Main {
     	    System.out.print("Precio: ");
     	    double precio = scanner.nextDouble();
 
-    
+    	    
     	    System.out.println("Paises disponibles:");
     	    mostrarPaises(paises);
     	    System.out.print("Ingrese el codigo del pais: ");
     	    String codigoPais = scanner.next();
     	    Pais pais = null;
-    	   
+    	    
     	    for (Pais p : paises) {
     	        if (p.getCodigo().equalsIgnoreCase(codigoPais)) {
     	            pais = p;
     	            break;
     	        }
     	    }
-    	    
+    	  
     	    if (pais == null) {
     	        System.out.println("Pais no encontrado.");
     	        return;
@@ -128,7 +128,7 @@ public class Main {
     private static void modificarPaisDestino(ArrayList<DestinoTuristico> destinos, ArrayList<Pais> paises, Scanner scanner) {
     	System.out.print("Ingrese el codigo del destino turistico que quiere modificar: ");
         String codigoDestino = scanner.next();
-       
+        
         DestinoTuristico destinoModificar = null;
         for (DestinoTuristico destino : destinos) {
             if (destino.getCodigo().equalsIgnoreCase(codigoDestino)) {
@@ -142,7 +142,7 @@ public class Main {
             return;
         }
 
-       
+  
         System.out.println("Paises disponibles:");
         mostrarPaises(paises);
         System.out.print("Ingrese el codigo del nuevo pais: ");
@@ -184,7 +184,7 @@ public class Main {
     	if (destinos.isEmpty()) {
             System.out.println("No hay destinos turisticos disponibles.");
         } else {
-       
+            
             Collections.sort(destinos, Comparator.comparing(DestinoTuristico::getNombre));
 
             System.out.println("Destinos turisticos ordenados por nombre:");
@@ -198,7 +198,7 @@ public class Main {
     	if (paises.isEmpty()) {
             System.out.println("No hay paises disponibles.");
         } else {
-       
+        	
             System.out.println("Lista de paises:");
             for (Pais pais : paises) {
                 System.out.println(pais.getCodigo() + " - " + pais.getNombre());

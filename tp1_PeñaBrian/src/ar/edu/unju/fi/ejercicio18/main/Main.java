@@ -221,7 +221,7 @@ public class Main {
     	    }
 
     	    if (!encontrado) {
-    	        System.out.println("No se encontraron destinos turisticos para el pais con cidigo " + codigoPais);
+    	        System.out.println("No se encontraron destinos turisticos para el pais con codigo " + codigoPais);
     	    }
     }
 }
